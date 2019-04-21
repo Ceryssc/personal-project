@@ -7,11 +7,12 @@ export default function CommentList (props) {
   console.log(props)
   return (
     <div className='widget-list'>
-      <h2>List</h2>
+      <h2>Comments</h2>
       {props.comments.map((comments)=> {
         return <CommentListItem
           key={comments.id}
           comment={comments.comment}
+          name={comments.name}
           // hideDetails={props.hideDetails}
           showDetails={props.showDetails} 
           />

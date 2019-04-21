@@ -45,11 +45,17 @@ refreshList (err) {
   })
   api.getComments(this.renderComments)
 }
+showAddWidget () {
+  this.setState({
+    addWidgetVisible: true
+  })
+}
 
 showDetails (widget) {
   this.setState({
     // activeComment: comment,
-    detailsVisible: true
+    detailsVisible: true,
+    addWidgetVisible: false
   })
 }
 
@@ -58,12 +64,16 @@ render () {
     <div>
           <ErrorMessage error={this.state.error} />
       <h1>personal project</h1>
+
+
+
      <CommentList
        showDetails={this.showDetails}
      comments ={this.state.comments}/>
   
   
-  <Form/>
+  <Form
+         />
       <Router>
         <div>
           <Route exact path='/' component={Home} />

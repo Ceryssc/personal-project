@@ -9,3 +9,13 @@ export function getComments (callback) {
       callback(err, res.body)
     })
 }
+
+export function appendComments (comment, callback) {
+    console.log("this is being called in apijs")
+    request
+      .post(commentUrl)
+        .send(comment) 
+        .end((err, res) => {
+        callback(err), res
+      })
+  }

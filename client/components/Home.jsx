@@ -9,10 +9,10 @@ const Home = () => {
       <p>personal project - This is the home page </p>
       
       
-      <Button variant="primary"><Link to="/wombats">All about wombats</Link></Button>
+      <Button variant="primary"><Link to="/wombats">Me</Link></Button>
       
       
-      <li><Link to="/wombats">All about wombats</Link></li>
+      <li><Link to="/wombats">All about Me!</Link></li>
     
     </div>
   )

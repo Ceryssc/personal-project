@@ -1,41 +1,63 @@
 import React, { Component } from "react";
-class Form extends Component {
+
+
+import {appendComments} from '../api'
+
+
+
+class Form extends React.Component {
   constructor(props) {
     super(props);
-this.state = {
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
+  this.state = {
+      name: "",
+      comment: "",
+      // email: "",
+      // password: "",
     };
-this.handleInputChange = this.handleInputChange.bind(this);
+
+
+this.handleChange = this.handleChange.bind(this);
+this.addComment = this.addComment.bind(this)
   }
-handleInputChange(event) {
+
+
+
+
+ handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
     });
   }
-render() {
-    const { firstName, lastName, email, password } = this.state;
-return (
+
+
+  addComment (e) {
+    appendComments(this.state, this.props.finishAdd)
+  }
+
+
+ render() {
+    const { name, comment} = this.state;
+ return (
       <form>
         <input
-          value={firstName}
-          onChange={this.handleInputChange}
-          placeholder="First name"
+          value={name}
+          onChange={this.handleChange}
+          placeholder="name"
+          value={this.state.name}
           type="text"
-          name="firstName"
+          name="name"
           required
         />
         <input
-          value={lastName}
-          onChange={this.handleInputChange}
-          placeholder="Last name"
+          value={comment}
+          onChange={this.handleChange}
+          placeholder="comment"
+          value={this.state.price}
           type="text"
-          name="lastName"
+          name="comment"
           required
         />
-        <input
+        {/* <input
           value={email}
           onChange={this.handleInputChange}
           placeholder="Email address"
@@ -50,8 +72,9 @@ return (
           type="password"
           name="password"
           required
-        />
-<button type="submit">Submit</button>
+        /> */}
+<button type="button" onClick={this.addComment}>Submit</button>
+<a href='#' onClick={this.props.finishAdd}>Cancel</a>
       </form>
     );
   }

@@ -1,11 +1,12 @@
 import React from 'react'
 
-export default function CommentListItem ({comment, showDetails}) {
+export default function CommentListItem ({comment, name, showDetails}) {
     console.log({comment})
   return (
     <div className='widget-list-item'>
        {`${comment} `}
-      <a href='#' onClick={() => showDetails(comments)}>details</a>
+       {`${name} `}
+      {/* <a href='#' onClick={() => showDetails(comments)}>details</a> */}
     </div>
   )
 }
