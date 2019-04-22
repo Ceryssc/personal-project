@@ -14,7 +14,8 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    db.addComments(req.body)
+    console.log("saveComments has been called in routes ")
+    db.saveComments(req.body)
       .then(res.sendStatus(200))
   })
 

@@ -6,7 +6,7 @@ const connection = require('knex')(config)
 
 module.exports = {
   getComments,
-  addComments
+  saveComments
   
 }
 function getComments(db = connection) {
@@ -16,8 +16,8 @@ function getComments(db = connection) {
 
 
 
-  function addComments(comment, db = connection) {
-    console.log("addcomments has been called in dbjs")
+  function saveComments(comment, db = connection) {
+    console.log("saveComments hasss been called in dbjs")
     return db('comments')
       .insert({
         name: comment.name,

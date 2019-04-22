@@ -11,7 +11,7 @@ export function getComments (callback) {
 }
 
 export function appendComments (comment, callback) {
-    console.log("this is being called in apijs")
+    console.log("appendComments this is being called in apijs")
     request
       .post(commentUrl)
         .send(comment) 

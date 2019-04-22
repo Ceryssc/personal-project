@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 
-import {appendComments} from '../api'
-
+// import {appendComments} from '../api'
+import * as api from '../api'
 
 
 class Form extends React.Component {
@@ -31,7 +31,8 @@ this.addComment = this.addComment.bind(this)
 
 
   addComment (e) {
-    appendComments(this.state, this.props.finishAdd)
+    api.appendComments(this.state)
+      // this.props.finishAdd)
   }
 
 
@@ -74,7 +75,7 @@ this.addComment = this.addComment.bind(this)
           required
         /> */}
 <button type="button" onClick={this.addComment}>Submit</button>
-<a href='#' onClick={this.props.finishAdd}>Cancel</a>
+{/* <a href='#' onClick={this.props.finishAdd}>Cancel</a> */}
       </form>
     );
   }
