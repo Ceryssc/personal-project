@@ -16,6 +16,7 @@ export function appendComments (comment, callback) {
       .post(commentUrl)
         .send(comment) 
         .end((err, res) => {
-        callback(err), res
+          
+          callback(err)
       })
   }

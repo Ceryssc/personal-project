@@ -13,6 +13,7 @@ export default function CommentList (props) {
           key={comments.id}
           comment={comments.comment}
           name={comments.name}
+     
           // hideDetails={props.hideDetails}
           showDetails={props.showDetails} 
           />

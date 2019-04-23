@@ -36,7 +36,7 @@ this.addComment = this.addComment.bind(this)
 
 
  render() {
-    const { name, comment} = this.state;
+    // const { name, comment} = this.state;
  return (
       <form>
         <input

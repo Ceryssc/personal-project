@@ -25,6 +25,7 @@ export default class App extends React.Component  {
   this.refreshList = this.refreshList.bind(this)
   this.renderComments = this.renderComments.bind(this)
   this.showDetails = this.showDetails.bind(this)
+  this.showAddWidget = this.showAddWidget.bind(this)
 }
 
 componentDidMount () {
@@ -45,6 +46,7 @@ refreshList (err) {
   })
   api.getComments(this.renderComments)
 }
+
 showAddWidget () {
   this.setState({
     addWidgetVisible: true
@@ -71,12 +73,15 @@ render () {
        showDetails={this.showDetails}
      comments ={this.state.comments}/>
   
+
+  <Form  finishAdd={this.refreshList}/>
   
-  <Form
-         />
+        
+
+<button name="refresh" onClick={this.refreshList}>Refresh Page</button>
       <Router>
         <div>
-          <Route exact path='/' component={Home} />
+          <Route  path='/' component={Home} />
 
 
         </div>
