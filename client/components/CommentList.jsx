@@ -6,7 +6,7 @@ import CommentListItem from './CommentListItem'
 export default function CommentList (props) {
   console.log(props)
   return (
-    <div className='widget-list'>
+    <div className='comment-list'>
       <h2>Comments</h2>
       {props.comments.map((comments)=> {
         return <CommentListItem

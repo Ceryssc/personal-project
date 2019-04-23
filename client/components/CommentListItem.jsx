@@ -4,9 +4,9 @@ export default function CommentListItem ({comment, name, showDetails}) {
     console.log({comment})
   return (
     <div className='widget-list-item'>
-         {`${name} `}
+         Name:{`${name} `}
        
-       {`${comment} `}
+      Comment: {`${comment} `}
   
     
       {/* <a href='#' onClick={() => showDetails(comments)}>details</a> */}

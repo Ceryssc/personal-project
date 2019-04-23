@@ -38,45 +38,54 @@ this.addComment = this.addComment.bind(this)
  render() {
     const { name, comment} = this.state;
  return (
-      <form>
-        <input
-          // value={name}
-          onChange={this.handleChange}
-          placeholder="name"
-          value={this.state.name}
-          type="text"
-          name="name"
-          required
-        />
-        <input
-          // value={comment}
-          onChange={this.handleChange}
-          placeholder="comment"
-          value={this.state.price}
-          type="text"
-          name="comment"
-          required
-        />
-        {/* <input
-          value={email}
-          onChange={this.handleInputChange}
-          placeholder="Email address"
-          type="email"
-          name="email"
-          required
-        />
-        <input
-          value={password}
-          onChange={this.handleInputChange}
-          placeholder="Password"
-          type="password"
-          name="password"
-          required
-        /> */}
- <button type="button" onClick={this.addComment}>Submit</button>
- {' '}
+<div className="form">
+  <form>
+    <div className = "inputOne">
+  <input
+    // value={name}
+    onChange={this.handleChange}
+    placeholder="name"
+    value={this.state.name}
+    type="text"
+    name="name"
+    required
+  />
+  </div>
+  <div className = "inputTwo">
+  <input
+    // value={comment}
+    onChange={this.handleChange}
+    placeholder="comment"
+    value={this.state.price}
+    type="text"
+    name="comment"
+    required
+  />
+  </div>
+  {/* <input
+    value={email}
+    onChange={this.handleInputChange}
+    placeholder="Email address"
+    type="email"
+    name="email"
+    required
+  />
+  <input
+    value={password}
+    onChange={this.handleInputChange}
+    placeholder="Password"
+    type="password"
+    name="password"
+    required
+  /> */}
+<button className="b1" type="button" onClick={this.addComment}>Submit</button>
+{' '}
 <a href='#' onClick={this.props.finishAdd}>Cancel</a>
-      </form>
+</form>
+</div>
+      
+       
+   
     );
   }
 }
