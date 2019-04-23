@@ -63,13 +63,13 @@ showDetails (widget) {
 
 render () {
   return (
-    <div>
+    <div className="container">
           <ErrorMessage error={this.state.error} />
       <h1>personal project</h1>
 
 
 
-     <CommentList
+     <CommentList className= "comments"
        showDetails={this.showDetails}
      comments ={this.state.comments}/>
   
