@@ -7,6 +7,7 @@ import ErrorMessage from './ErrorMessage'
 // import {getComments} from '../api'
 import * as api from '../api'
 
+
 // import AppBar from './AppBar'
 
 
@@ -64,18 +65,17 @@ showDetails (widget) {
 
 render () {
   return (
-    <div className="container">
+
+    <div className="main-container">
           <ErrorMessage error={this.state.error} />
+         
       <h1>personal project</h1>
 
 
 
-     <CommentList className= "comments"
-       showDetails={this.showDetails}
-     comments ={this.state.comments}/>
-  
 
-  <Form  finishAdd={this.refreshList}/>
+
+
   
         
 
@@ -89,6 +89,16 @@ render () {
 
         </div>
 
+        <div className = "formStuff">
+        <Form  finishAdd={this.refreshList}/>
+        </div>
+        <CommentList className= "comments"
+       showDetails={this.showDetails}
+     comments ={this.state.comments}/>
+  
+     
+      
+     
       </Router>
     </div>
   )
